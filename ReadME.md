@@ -1,6 +1,6 @@
 # Code for GANorCON
 
-This is the code for the contrastive few-shot part segmentation method proposed in 'GANorCON : Are Generative Models Useful for Few-shot Segmentation?'. We provide the pretrained MocoV2 model for ease.
+This is the code for the contrastive few-shot part segmentation method proposed in 'GANorCON : Are Generative Models Useful for Few-shot Segmentation?'. 
 
 
 ## Preparation
