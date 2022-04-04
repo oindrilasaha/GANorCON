@@ -59,7 +59,17 @@ python3 gen_score_seg.py --resume ./512_faces_celeba_distilled/deeplab_class_34_
 Place the folder where all checkpoints are stored in --resume for both cases.
 
 
+## Citation
+If you use this code for your research, please cite the following papers.
 
+```
+@article{saha2021ganorcon,
+  title={GANORCON: Are Generative Models Useful for Few-shot Segmentation?},
+  author={Saha, Oindrila and Cheng, Zezhou and Maji, Subhransu},
+  journal={arXiv preprint arXiv:2112.00854},
+  year={2021}
+}
+```
 
 
 
