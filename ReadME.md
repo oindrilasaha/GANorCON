@@ -8,7 +8,9 @@ This is the code for the contrastive few-shot part segmentation method proposed 
 pip3 install requirements.txt
 ```
 -> Download MoCoV2_512_CelebA.pth from https://drive.google.com/file/d/1n0iyFuZ20s_DsIAorvmtVLIdHIG_65N0/ and place inside this folder
+
 -> Place the [DatasetGAN released data](https://drive.google.com/drive/folders/1PSS0uOusN3dV84YLT9Gds1ZSugjpMz7E) at ./DatasetGAN_data inside this folder
+
 -> Download CelebAMask from [here](https://drive.google.com/open?id=1badu11NqxGf6qM3PTTooQDJvQbejgbTv) and place inside this folder
 
 ## Training - Few Shot Segmentation
