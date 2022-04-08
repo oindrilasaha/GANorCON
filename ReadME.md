@@ -68,8 +68,8 @@ If you use this code for your research, please cite the following papers.
 @article{saha2021ganorcon,
   title={GANORCON: Are Generative Models Useful for Few-shot Segmentation?},
   author={Saha, Oindrila and Cheng, Zezhou and Maji, Subhransu},
-  journal={arXiv preprint arXiv:2112.00854},
-  year={2021}
+  booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2022}
 }
 ```
 
