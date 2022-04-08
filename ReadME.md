@@ -1,4 +1,4 @@
-# Code for GANorCON
+# GANorCON
 
 This is the code for the contrastive few-shot part segmentation method proposed in
 
@@ -8,7 +8,7 @@ This is the code for the contrastive few-shot part segmentation method proposed 
 
 [[arXiv]](https://arxiv.org/pdf/2112.00854.pdf) [[Project page]](https://people.cs.umass.edu/~osaha/ganorcon/)
 
-<img src = "./figs/ganvscon.pdf" width="80%"/>
+<img src = "./figs/ganvscon.png" width="80%"/>
 
 ## Preparation
 ```
