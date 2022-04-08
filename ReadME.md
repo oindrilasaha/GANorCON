@@ -74,7 +74,7 @@ Model | fcn | UNet
 Direct | 0.5162 | 0.5414
 Distill | 0.5341 | 0.5406
 
-###### COMING SOON : code for Cars and Cats
+##### [COMING SOON : code for Cars and Cats]
 
 ## Citation
 If you use this code for your research, please cite the following paper.
