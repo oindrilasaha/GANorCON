@@ -62,7 +62,7 @@ Place the folder where all checkpoints are stored in --resume for both cases.
 
 
 ## Citation
-If you use this code for your research, please cite the following papers.
+If you use this code for your research, please cite the following paper.
 
 ```
 @article{saha2021ganorcon,
