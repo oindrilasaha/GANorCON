@@ -67,12 +67,14 @@ python3 gen_score_seg.py --resume ./512_faces_celeba_distilled/deeplab_class_34_
 
 Place the folder where all checkpoints are stored in --resume for both cases.
 
-Results using the above script for various configurations should be similar to::
+Results using the above script for various configurations should be similar to:
 
 Model | fcn | UNet
 --- | --- | --- 
 Direct | 0.5162 | 0.5414
 Distill | 0.5341 | 0.5406
+
+###### COMING SOON : code for Cars and Cats
 
 ## Citation
 If you use this code for your research, please cite the following paper.
