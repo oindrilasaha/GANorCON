@@ -24,28 +24,28 @@ pip3 install requirements.txt
 
 ```bash
 
-python3 eval_face_seg.py --model resnet50 --segmodel fcn --layer 4 --trained_model_path MoCoV2_512_CelebA.pth --learning_rate 0.001 --weight_decay 0.0005 --adam --epochs 800 --cosine --batch_size 1 --log_path ./log.txt --model_name face_segmentor --model_path ./512_faces_celeba --image_size 512 --use_hypercol 
+python3 train_face_seg.py --model resnet50 --segmodel fcn --layer 4 --trained_model_path MoCoV2_512_CelebA.pth --learning_rate 0.001 --weight_decay 0.0005 --adam --epochs 800 --cosine --batch_size 1 --log_path ./log.txt --model_name face_segmentor --model_path ./512_faces_celeba --image_size 512 --use_hypercol 
 
 ```
-Option --segmodel can be set to either "fcn" or "UNet" for either variants described in the paper. --model_path can be set to desired location for saving the checkpoints.
+Option --segmodel can be set to either "fcn" or "UNet" for either variants described in the paper. --model_path can be set to desired location for saving the checkpoints. This command runs the training on the Face-34 dataset starting from the MoCoV2 checpoint. It displays the cross entropy loss in each epoch.
 
 ## Generate data for distillation
 
 ```bash
 
-python3 eval_face_seg.py --model resnet50 --segmodel fcn --layer 4 --trained_model_path MoCoV2_512_CelebA.pth --image_size 512 --use_hypercol --generate --gen_path ./labels_fordeeplab/ --resume ./512_faces_celeba/face_segmentor/resnet50.pth
+python3 train_face_seg.py --model resnet50 --segmodel fcn --layer 4 --trained_model_path MoCoV2_512_CelebA.pth --image_size 512 --use_hypercol --generate --gen_path ./labels_fordeeplab/ --resume ./512_faces_celeba/face_segmentor/resnet50.pth
 
 ```
-Place path to the trained model resnet50.pth in --resume. Option --gen_path is where the generated predicted labels using checkpoint in --resume will be stored.
+Place path to the trained model resnet50.pth in --resume. Option --gen_path is where the generated predicted labels using checkpoint in --resume will be stored. This code will generate predictions on CelebA images using the model trained in the previous step to use as hard labels for distillation.
 
-## Distillation
+## Training - Distillation
 
 ```bash
 
 python3 train_deeplab_contrast.py --data_path ./labels_fordeeplab/ --model_path ./512_faces_celeba_distilled --image_size 512 --num_classes 34
 
 ```
-Specify the path to generated labels from previous step in --data_path and specify path to save model in --model_path.
+Specify the path to generated labels from previous step in --data_path and specify path to save model in --model_path. This will launch distillation using the hard labels from the few-shot trained model and will print the cross-entropy loss for iterations.
 
 ## Testing
 
@@ -67,7 +67,7 @@ python3 gen_score_seg.py --resume ./512_faces_celeba_distilled/deeplab_class_34_
 
 Place the folder where all checkpoints are stored in --resume for both cases.
 
-Results using the above script for various configurations should be similar to:
+The above code prints the mean IoU by doing 5-fold cross validation for all saved checkpoints. Results using the above script for various configurations should be as below:
 
 Model | fcn | UNet
 --- | --- | --- 
