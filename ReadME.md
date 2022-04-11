@@ -4,7 +4,7 @@ This is the code for the contrastive few-shot part segmentation method proposed 
 
 #### GANorCON : Are Generative Models Useful for Few-shot Segmentation?
 
-[Oindrila Saha](http://oindrilasaha.github.io), [Zezhou Cheng](http://sites.google.com/site/zezhoucheng/), [Subhransu Maji](http://people.cs.umass.edu/~smaji/)
+[Oindrila Saha](http://oindrilasaha.github.io), [Zezhou Cheng](http://sites.google.com/site/zezhoucheng/), [Subhransu Maji](http://people.cs.umass.edu/~smaji/) CVPR'22
 
 [[arXiv]](https://arxiv.org/pdf/2112.00854.pdf) [[Project page]](https://people.cs.umass.edu/~osaha/ganorcon/)
 
@@ -76,6 +76,8 @@ Distill | 0.5341 | 0.5406
 
 #### [COMING SOON : code for Cars and Cats]
 
+Code bulit upon https://github.com/nv-tlabs/datasetGAN_release
+
 ## Citation
 If you use this code for your research, please cite the following paper.
 
@@ -87,7 +89,6 @@ If you use this code for your research, please cite the following paper.
   year={2022}
 }
 ```
-
 
 
 
