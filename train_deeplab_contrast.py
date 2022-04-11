@@ -1,4 +1,7 @@
 """
+Code has been built upon https://github.com/nv-tlabs/datasetGAN_release with
+following copyright:
+
 Copyright (C) 2021 NVIDIA Corporation.  All rights reserved.
 Licensed under The MIT License (MIT)
 
